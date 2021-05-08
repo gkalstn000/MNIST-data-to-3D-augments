@@ -9,9 +9,9 @@ author: Haribo
 ---
 * content
 {:toc}
-[Blog](https://gkalstn000.github.io/2021/05/08/mnist_to_3D/){:target="_blank"}
-
 # Data
+
+[Blog](https://gkalstn000.github.io/2021/05/08/mnist_to_3D/){:target="_blank"}
 
 
 ```python
