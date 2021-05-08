@@ -91,7 +91,7 @@ def load_background() :
 ```
 
 ## 이미지 확장
-1-D 이미지는 0~1 사이의 값을 가진다. 역으로 생각해보면 원본 이미지의 채널 3개를 합친 후 min-max scale을 해주면 MNIST데이터셋이 만들어진다라고 생각할 수 있다. 따라서 MNIST이미지를 inverse min-max scale을 해주면 color이미지를 만들 수 있겠다고 생각을 했다.
+1-D 이미지는 0~1 사이의 값을 가진다. 역으로 생각해보면 **원본 이미지의 채널 3개를 합친 후 min-max scale을 해주면 MNIST데이터셋이 만들어진다**라고 생각할 수 있다. 따라서 MNIST이미지를 inverse min-max scale을 해주면 color이미지를 만들 수 있겠다고 생각을 했다.
 > 각 채널의 min, max값은 0~255사이의 값을 무작위로 출력해주는 uniform distribution에서 뽑아온다.  
 > `원본이미지(max-min) + min`공식을 이용해 inverse scaling 해준다.  
 > background + MNIST 해서 이미지를 합쳐준다.
