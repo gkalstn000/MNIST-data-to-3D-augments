@@ -5,10 +5,12 @@ categories: ML AI
 date:   2021-05-09 00:10:18 +0900
 tags: Math
 mathjax: True
-author: [Haribo](https://gkalstn000.github.io/2021/05/08/mnist_to_3D/)
+author: Haribo
 ---
 * content
 {:toc}
+[Blog](https://gkalstn000.github.io/2021/05/08/mnist_to_3D/){:target="_blank"}
+
 # Data
 
 
