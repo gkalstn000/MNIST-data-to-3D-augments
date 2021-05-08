@@ -2,10 +2,10 @@
 layout: post
 title:  "MNIST with DNN Regularzation"
 categories: ML AI
-date:   2021-04-14 15:10:18 +0900
+date:   2021-05-09 00:10:18 +0900
 tags: Math
 mathjax: True
-author: Haribo
+author: [Haribo](https://gkalstn000.github.io/2021/05/08/mnist_to_3D/)
 ---
 * content
 {:toc}
