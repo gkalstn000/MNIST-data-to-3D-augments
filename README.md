@@ -168,27 +168,28 @@ y_train_arguments.shape
 
 
 
-## Sample 확장
+## 확장한 Samples print
 
 
 ```python
+# original image
 img = X_train[2093]
 print_image(img)
 ```
 
 
 ​    
-![png](output_15_0.png)
+![png](./image/output_15_0.png)
 ​    
 
 
 
 ```python
+# expanded images
 rgbs = make_rgb(img, figures)
 for rgb in rgbs :
     print_image(rgb)
 ```
-
 
 ![png](./image/output_16_0.png)
 ​    
