@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "MNIST with DNN Regularzation"
+title:  "MNIST augmentation"
 categories: ML AI
 date:   2021-05-09 00:10:18 +0900
 tags: Math
@@ -131,16 +131,16 @@ figures = load_background()
 
 ```python
 # X_train(60000, 28, 28)에 적용
-X_train_arguments = []
+X_train_augments = []
 for img in X_train :
-    X_train_arguments += make_rgb(img, figures)
-X_train_arguments = np.array(X_train_arguments)
+    X_train_augments += make_rgb(img, figures)
+X_train_augments = np.array(X_train_augments)
 ```
 
 
 ```python
 # 적용 후 데이터셋
-X_train_arguments.shape
+X_train_augments.shape
 ```
 
 
@@ -152,15 +152,15 @@ X_train_arguments.shape
 
 
 ```python
-y_train_arguments = []
+y_train_augments = []
 for y in y_train :
-    y_train_arguments += [y]*6
-y_train_arguments = np.array(y_train_arguments)
+    y_train_augments += [y]*6
+y_train_augments = np.array(y_train_augments)
 ```
 
 
 ```python
-y_train_arguments.shape
+y_train_augments.shape
 ```
 
 
@@ -227,7 +227,7 @@ for rgb in rgbs :
     
 
 
-# Data Argumentation
+# Data Augmentation
 [참조 사이트](https://github.com/aleju/imgaug)
 
 먼저 `imgaug`를 설치해줘야한다. [설치방법](https://github.com/aleju/imgaug#installation) 에 자세히 나와있다.
@@ -321,7 +321,7 @@ seq = iaa.Sequential(
     ],
     random_order=True
 )
-images_aug = seq(images=X_train_arguments)
+images_aug = seq(images=X_train_augments)
 ```
 
 
@@ -341,7 +341,7 @@ images_aug.shape
 idx = np.random.randint(360000, size=6)
 for rgb, i in zip(images_aug[idx], idx) :
     print_image(rgb)
-    print('original label :',y_train_arguments[i])
+    print('original label :',y_train_augments[i])
 ```
 
 
@@ -399,8 +399,8 @@ for rgb, i in zip(images_aug[idx], idx) :
 
 
 ```python
-data_X = np.vstack([X_train_arguments, images_aug])
-data_y = np.hstack([y_train_arguments, y_train_arguments])
+data_X = np.vstack([X_train_augments, images_aug])
+data_y = np.hstack([y_train_augments, y_train_augmentsa])
 ```
 
 
